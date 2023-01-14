@@ -41,6 +41,20 @@ function getComputerChoice() {
 };
 
 
+// Game's Rules
+// Rock beats Scissors
+// Scissors beats Paper
+// Paper beats Rock
+// If player chooses Rock and computer chooses Scissors or 
+// player chooses Scissors and computer chooses Paper or
+// player chooses Paper and computer chooses Rock,
+// the player wins
+// If player chooses Rock and computer chooses Paper or 
+// player chooses Scissors and computer chooses Rock or
+// player chooses Paper and computer chooses Scissors,
+// the player lose
+// If they choose the same, it's a tie
+
 function playRound(playerSelection, computerSelection) {
 
     if ((playerSelection == "Rock" && computerSelection === "Scissors") || 
