@@ -36,6 +36,8 @@ function getComputerChoice() {
         default:
             getComputerChoice();
     };
+
+    return choice;
 };
 
 
