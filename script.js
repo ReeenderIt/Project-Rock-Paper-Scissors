@@ -21,19 +21,16 @@ function getComputerChoice() {
         case 0:
         case 1:
         case 2:
-            console.log("Rock");
             choice = "Rock";
             break;
         case 3:
         case 4:
         case 5:
-            console.log("Paper");
             choice = "Paper";
             break;
         case 6:
         case 7:
         case 8:
-            console.log("Scissors");
             choice = "Scissors";
             break;
         default:
