@@ -82,5 +82,5 @@ function playRound(playerSelection, computerSelection) {
     };
 };
 
-
+let computerSelection = getComputerChoice();
 
