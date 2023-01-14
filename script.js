@@ -1,6 +1,15 @@
 
 let x;
 
+// Generate random number from 0 - 9
+// Divide the numbers to sets: [0, 1, 2], [3, 4, 5], [6, 5, 7]
+// Assign sets to the outcome:
+// [0, 1, 2] - Rock
+// [3, 4, 5] - Paper
+// [6, 7, 8] - Scissors
+// The number generated will select the outcome
+// If number generated is 9, run the code again
+
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 10);
 
