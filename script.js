@@ -57,13 +57,16 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toLowerCase();
 
+    let result = ["Winner","resultStatement"];
+
     if ((playerSelection == "rock" && computerSelection === "scissors") || 
         (playerSelection == "scissors" && computerSelection === "paper") || 
         (playerSelection == "paper" && computerSelection === "rock")) {
 
         // console.log(`You chose ${playerSelection}.`);
         // console.log(`Computer chose ${computerSelection}.`);
-        return `You Win! ${playerSelection} beats ${computerSelection}.`;
+        result[0] = "Player";
+        result[1] = `You Win! ${playerSelection} beats ${computerSelection}.`;
 
     } else if ((playerSelection == "rock" && computerSelection === "paper") || 
                (playerSelection == "scissors" && computerSelection === "rock") || 
@@ -71,7 +74,8 @@ function playRound(playerSelection, computerSelection) {
         
                 // console.log(`You chose ${playerSelection}.`);
                 // console.log(`Computer chose ${computerSelection}.`);
-                return `You Lose! ${computerSelection} beats ${playerSelection}.`;
+                result[0] = "Computer";
+                result[1] = `Computer Wins! ${computerSelection} beats ${playerSelection}.`;
 
     } else if ((playerSelection == "rock" && computerSelection === "rock") || 
                (playerSelection == "scissors" && computerSelection === "scissors") || 
@@ -79,7 +83,14 @@ function playRound(playerSelection, computerSelection) {
         
                 // console.log(`You chose ${playerSelection}.`);
                 // console.log(`Computer chose ${computerSelection}.`);
-                return `It's a Tie!`;
-
+                result[0] = "Tie";
+                result[1] = `It's a Tie!`;
     };
+
+    return result;
 };
+
+let computerSelection = getComputerChoice();
+let playerSelection = "Rock"
+
+console.log(playRound( playerSelection, computerSelection));
