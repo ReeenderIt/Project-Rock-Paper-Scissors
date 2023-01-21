@@ -34,7 +34,7 @@ function getComputerChoice() {
             choice = "Scissors";
             break;
         default:
-            getComputerChoice();
+            return getComputerChoice(); // recursion needs return if you want it to return a value
     };
 
     return choice;
