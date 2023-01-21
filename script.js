@@ -19,17 +19,17 @@ function getComputerChoice() {
         case 0:
         case 1:
         case 2:
-            choice = "Rock";
+            choice = "rock";
             break;
         case 3:
         case 4:
         case 5:
-            choice = "Paper";
+            choice = "paper";
             break;
         case 6:
         case 7:
         case 8:
-            choice = "Scissors";
+            choice = "scissors";
             break;
         default:
             return getComputerChoice(); // recursion needs return if you want it to return a value
@@ -57,29 +57,29 @@ function playRound(playerSelection, computerSelection) {
 
     playerSelection = playerSelection.toLowerCase();
 
-    if ((playerSelection == "rock" && computerSelection === "Scissors") || 
-        (playerSelection == "scissors" && computerSelection === "Paper") || 
-        (playerSelection == "paper" && computerSelection === "Rock")) {
+    if ((playerSelection == "rock" && computerSelection === "scissors") || 
+        (playerSelection == "scissors" && computerSelection === "paper") || 
+        (playerSelection == "paper" && computerSelection === "rock")) {
 
         console.log(`You chose ${playerSelection}.`);
         console.log(`Computer chose ${computerSelection}.`);
         console.log(`You Win! ${playerSelection} beats ${computerSelection}.`);
 
-    } else if ((playerSelection == "rock" && computerSelection === "Paper") || 
-               (playerSelection == "scissors" && computerSelection === "Rock") || 
-               (playerSelection == "paper" && computerSelection === "Scissors")) {
+    } else if ((playerSelection == "rock" && computerSelection === "paper") || 
+               (playerSelection == "scissors" && computerSelection === "rock") || 
+               (playerSelection == "paper" && computerSelection === "scissors")) {
         
-        console.log(`You chose ${playerSelection}.`);
-        console.log(`Computer chose ${computerSelection}.`);
-        console.log(`You Lose! ${computerSelection} beats ${playerSelection}.`);
+                console.log(`You chose ${playerSelection}.`);
+                console.log(`Computer chose ${computerSelection}.`);
+                console.log(`You Lose! ${computerSelection} beats ${playerSelection}.`);
 
-    } else if ((playerSelection == "rock" && computerSelection === "Rock") || 
-               (playerSelection == "scissors" && computerSelection === "Scissors") || 
-               (playerSelection == "paper" && computerSelection === "Paper")) {
+    } else if ((playerSelection == "rock" && computerSelection === "rock") || 
+               (playerSelection == "scissors" && computerSelection === "scissors") || 
+               (playerSelection == "paper" && computerSelection === "paper")) {
         
-        console.log(`You chose ${playerSelection}.`);
-        console.log(`Computer chose ${computerSelection}.`);
-        console.log(`It's a Tie!`);
+                console.log(`You chose ${playerSelection}.`);
+                console.log(`Computer chose ${computerSelection}.`);
+                console.log(`It's a Tie!`);
 
     };
 };
