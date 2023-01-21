@@ -13,8 +13,6 @@ let x;
 function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 10);
 
-    console.log(randomNumber);
-
     let choice;
     
     switch (randomNumber) {
@@ -61,22 +59,24 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "Scissors" && computerSelection === "Paper") || 
         (playerSelection == "Paper" && computerSelection === "Rock")) {
         
-        console.log(playerSelection);
-        console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+        console.log(`You chose ${playerSelection}.`);
+        console.log(`Computer chose ${computerSelection}.`);
+        console.log(`You Win! ${playerSelection} beats ${computerSelection}.`);
 
     } else if ((playerSelection == "Rock" && computerSelection === "Paper") || 
                (playerSelection == "Scissors" && computerSelection === "Rock") || 
                (playerSelection == "Paper" && computerSelection === "Scissors")) {
         
-        console.log(playerSelection);
-        console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+        console.log(`You chose ${playerSelection}.`);
+        console.log(`Computer chose ${computerSelection}.`);
+        console.log(`You Lose! ${computerSelection} beats ${playerSelection}.`);
 
     } else if ((playerSelection == "Rock" && computerSelection === "Rock") || 
                (playerSelection == "Scissors" && computerSelection === "Scissors") || 
                (playerSelection == "Paper" && computerSelection === "Paper")) {
         
-        console.log(playerSelection);
-        console.log(computerSelection);
+        console.log(`You chose ${playerSelection}.`);
+        console.log(`Computer chose ${computerSelection}.`);
         console.log(`It's a Tie!`);
 
     };
