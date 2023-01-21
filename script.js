@@ -55,7 +55,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
 
-    playerSelection = playerSelection.toLowerCase();
+
 
     let result = ["Winner","resultStatement"];
 
@@ -92,6 +92,20 @@ function game() {
     for (let i = 0; i < 5; i++) {
 
         let playerSelection = prompt("Rock, Paper, or Scissors?", "");
+
+        playerSelection = playerSelection.toLowerCase();
+
+        if (playerSelection === "rock" || 
+            playerSelection === "scissors" || 
+            playerSelection === "paper") {
+
+        } else {
+            alert("Please enter Rock, Paper, or Scissors.");
+            location.reload();
+            return;
+        };
+
+        
         let computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
         let winner = result[0];
