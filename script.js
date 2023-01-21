@@ -63,8 +63,6 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "scissors" && computerSelection === "paper") || 
         (playerSelection == "paper" && computerSelection === "rock")) {
 
-        // console.log(`You chose ${playerSelection}.`);
-        // console.log(`Computer chose ${computerSelection}.`);
         result[0] = "Player";
         result[1] = `You Win! ${playerSelection} beats ${computerSelection}.`;
 
@@ -72,8 +70,6 @@ function playRound(playerSelection, computerSelection) {
                (playerSelection == "scissors" && computerSelection === "rock") || 
                (playerSelection == "paper" && computerSelection === "scissors")) {
         
-                // console.log(`You chose ${playerSelection}.`);
-                // console.log(`Computer chose ${computerSelection}.`);
                 result[0] = "Computer";
                 result[1] = `Computer Wins! ${computerSelection} beats ${playerSelection}.`;
 
@@ -81,8 +77,6 @@ function playRound(playerSelection, computerSelection) {
                (playerSelection == "scissors" && computerSelection === "scissors") || 
                (playerSelection == "paper" && computerSelection === "paper")) {
         
-                // console.log(`You chose ${playerSelection}.`);
-                // console.log(`Computer chose ${computerSelection}.`);
                 result[0] = "Tie";
                 result[1] = `It's a Tie!`;
     };
@@ -99,7 +93,6 @@ function game() {
 
         let playerSelection = prompt("Rock, Paper, or Scissors?", "");
         let computerSelection = getComputerChoice();
-
         let winner = playRound(playerSelection, computerSelection)[0];
         
 
