@@ -85,3 +85,5 @@ function playRound(playerSelection, computerSelection) {
 let computerSelection = getComputerChoice();
 let playerSelection = "Scissors";
 
+playRound(playerSelection, computerSelection);
+
