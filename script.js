@@ -55,25 +55,27 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
 
-    if ((playerSelection == "Rock" && computerSelection === "Scissors") || 
-        (playerSelection == "Scissors" && computerSelection === "Paper") || 
-        (playerSelection == "Paper" && computerSelection === "Rock")) {
-        
+    playerSelection = playerSelection.toLowerCase();
+
+    if ((playerSelection == "rock" && computerSelection === "Scissors") || 
+        (playerSelection == "scissors" && computerSelection === "Paper") || 
+        (playerSelection == "paper" && computerSelection === "Rock")) {
+
         console.log(`You chose ${playerSelection}.`);
         console.log(`Computer chose ${computerSelection}.`);
         console.log(`You Win! ${playerSelection} beats ${computerSelection}.`);
 
-    } else if ((playerSelection == "Rock" && computerSelection === "Paper") || 
-               (playerSelection == "Scissors" && computerSelection === "Rock") || 
-               (playerSelection == "Paper" && computerSelection === "Scissors")) {
+    } else if ((playerSelection == "rock" && computerSelection === "Paper") || 
+               (playerSelection == "scissors" && computerSelection === "Rock") || 
+               (playerSelection == "paper" && computerSelection === "Scissors")) {
         
         console.log(`You chose ${playerSelection}.`);
         console.log(`Computer chose ${computerSelection}.`);
         console.log(`You Lose! ${computerSelection} beats ${playerSelection}.`);
 
-    } else if ((playerSelection == "Rock" && computerSelection === "Rock") || 
-               (playerSelection == "Scissors" && computerSelection === "Scissors") || 
-               (playerSelection == "Paper" && computerSelection === "Paper")) {
+    } else if ((playerSelection == "rock" && computerSelection === "Rock") || 
+               (playerSelection == "scissors" && computerSelection === "Scissors") || 
+               (playerSelection == "paper" && computerSelection === "Paper")) {
         
         console.log(`You chose ${playerSelection}.`);
         console.log(`Computer chose ${computerSelection}.`);
