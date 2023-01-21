@@ -61,31 +61,25 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection == "scissors" && computerSelection === "paper") || 
         (playerSelection == "paper" && computerSelection === "rock")) {
 
-        console.log(`You chose ${playerSelection}.`);
-        console.log(`Computer chose ${computerSelection}.`);
-        console.log(`You Win! ${playerSelection} beats ${computerSelection}.`);
+        // console.log(`You chose ${playerSelection}.`);
+        // console.log(`Computer chose ${computerSelection}.`);
+        return `You Win! ${playerSelection} beats ${computerSelection}.`;
 
     } else if ((playerSelection == "rock" && computerSelection === "paper") || 
                (playerSelection == "scissors" && computerSelection === "rock") || 
                (playerSelection == "paper" && computerSelection === "scissors")) {
         
-                console.log(`You chose ${playerSelection}.`);
-                console.log(`Computer chose ${computerSelection}.`);
-                console.log(`You Lose! ${computerSelection} beats ${playerSelection}.`);
+                // console.log(`You chose ${playerSelection}.`);
+                // console.log(`Computer chose ${computerSelection}.`);
+                return `You Lose! ${computerSelection} beats ${playerSelection}.`;
 
     } else if ((playerSelection == "rock" && computerSelection === "rock") || 
                (playerSelection == "scissors" && computerSelection === "scissors") || 
                (playerSelection == "paper" && computerSelection === "paper")) {
         
-                console.log(`You chose ${playerSelection}.`);
-                console.log(`Computer chose ${computerSelection}.`);
-                console.log(`It's a Tie!`);
+                // console.log(`You chose ${playerSelection}.`);
+                // console.log(`Computer chose ${computerSelection}.`);
+                return `It's a Tie!`;
 
     };
 };
-
-let computerSelection = getComputerChoice();
-let playerSelection = "Scissors";
-
-playRound(playerSelection, computerSelection);
-
