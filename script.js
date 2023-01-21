@@ -90,7 +90,35 @@ function playRound(playerSelection, computerSelection) {
     return result;
 };
 
-let computerSelection = getComputerChoice();
-let playerSelection = "Rock"
+function game() {
 
-console.log(playRound( playerSelection, computerSelection));
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let i = 0; i < 5; i++) {
+
+        let playerSelection = prompt("Rock, Paper, or Scissors?", "");
+        let computerSelection = getComputerChoice();
+
+        let winner = playRound(playerSelection, computerSelection)[0];
+        
+
+        if (winner === "Player") {
+            playerScore++;
+            console.log(playRound(playerSelection, computerSelection)[1]);
+        } else if (winner === "Computer") {
+            computerScore++;
+            console.log(playRound(playerSelection, computerSelection)[1]);
+        } else if (winner === "Tie") {
+            console.log(playRound(playerSelection, computerSelection)[1]);
+        }; 
+    };
+
+    if (playerScore > computerScore) {
+        console.log(`You are the ultimate winner!`);
+    } else {
+        console.log(`Computer is the ultimate winner!`);
+    };
+};
+
+game();
