@@ -93,17 +93,19 @@ function game() {
 
         let playerSelection = prompt("Rock, Paper, or Scissors?", "");
         let computerSelection = getComputerChoice();
-        let winner = playRound(playerSelection, computerSelection)[0];
+        let result = playRound(playerSelection, computerSelection);
+        let winner = result[0];
+        let resultStatement = result[1];
         
 
         if (winner === "Player") {
             playerScore++;
-            console.log(playRound(playerSelection, computerSelection)[1]);
+            console.log(resultStatement);
         } else if (winner === "Computer") {
             computerScore++;
-            console.log(playRound(playerSelection, computerSelection)[1]);
+            console.log(resultStatement);
         } else if (winner === "Tie") {
-            console.log(playRound(playerSelection, computerSelection)[1]);
+            console.log(resultStatement);
         }; 
     };
 
