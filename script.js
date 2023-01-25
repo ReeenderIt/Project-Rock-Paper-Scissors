@@ -90,22 +90,12 @@ function game() {
     let computerScore = 0;
 
     for (let i = 0; i < 5; i++) {
-
-        let playerSelection = prompt("Rock, Paper, or Scissors?", "");
-
-        playerSelection = playerSelection.toLowerCase();
-
-        if (playerSelection === "rock" || 
-            playerSelection === "scissors" || 
-            playerSelection === "paper") {
-
-        } else {
-            alert("Please enter Rock, Paper, or Scissors.");
-            location.reload();
-            return;
-        };
-
         
+        
+        let playerPrompt = prompt("Rock, Paper, or Scissors?", "");
+        
+        let playerSelection = verifier(playerPrompt);
+
         let computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
         let winner = result[0];
@@ -128,6 +118,22 @@ function game() {
     } else {
         console.log(`Computer is the ultimate winner!`);
     };
+};
+
+function verifier(playerInput) {
+
+        let inputLowercased = playerInput.toLowerCase();
+
+        if (inputLowercased === "rock" || 
+            inputLowercased === "scissors" || 
+            inputLowercased === "paper") {
+                
+                return inputLowercased;
+
+        } else {
+            alert("Please enter Rock, Paper, or Scissors.");
+            location.reload();
+        };
 };
 
 game();
