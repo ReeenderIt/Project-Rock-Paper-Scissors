@@ -11,6 +11,7 @@ let x;
 // If number generated is 9, run the code again
 
 function getComputerChoice() {
+    
     let randomNumber = Math.floor(Math.random() * 10);
 
     let choice;
@@ -55,8 +56,6 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
 
-
-
     let result = ["Winner","resultStatement"];
 
     if ((playerSelection == "rock" && computerSelection === "scissors") || 
@@ -76,7 +75,7 @@ function playRound(playerSelection, computerSelection) {
     } else if ((playerSelection == "rock" && computerSelection === "rock") || 
                (playerSelection == "scissors" && computerSelection === "scissors") || 
                (playerSelection == "paper" && computerSelection === "paper")) {
-        
+
                 result[0] = "Tie";
                 result[1] = `It's a Tie!`;
     };
@@ -91,17 +90,13 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
         
-        
-        let playerPrompt = prompt("Rock, Paper, or Scissors?", "");
-        
-        let playerSelection = verifier(playerPrompt);
-
+        let playerPrompt = prompt("Rock, Paper, or Scissors?", ""); 
+        let playerSelection = verify(playerPrompt);
         let computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
         let winner = result[0];
         let resultStatement = result[1];
         
-
         if (winner === "Player") {
             playerScore++;
             console.log(resultStatement);
@@ -120,7 +115,7 @@ function game() {
     };
 };
 
-function verifier(playerInput) {
+function verify(playerInput) {
 
         let inputLowercased = playerInput.toLowerCase();
 
