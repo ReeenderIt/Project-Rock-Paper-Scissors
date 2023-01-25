@@ -76,7 +76,9 @@ function playRound(playerSelection, computerSelection) {
 
 
 function getFinalWinner(player1, player2) {
-    if (player1 > player2) {
+    if (player1 === player2) {
+        console.log(`It is a Tie!`);
+    } else if (playerScore > computerScore) {
         console.log(`You are the ultimate winner!`);
     } else {
         console.log(`Computer is the ultimate winner!`);
