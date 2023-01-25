@@ -1,6 +1,6 @@
 function verify(playerInput) {
 
-    let inputLowercased = playerInput.toLowerCase();
+    const inputLowercased = playerInput.toLowerCase();
 
     if (inputLowercased === "rock" || 
         inputLowercased === "scissors" || 
@@ -17,7 +17,7 @@ function verify(playerInput) {
 
 function getComputerChoice() {
 
-    let randomNumber = Math.floor(Math.random() * 10);
+    const randomNumber = Math.floor(Math.random() * 10);
 
     let choice;
     
@@ -47,7 +47,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
 
-    let result = ["Winner","resultStatement"];
+    const result = ["Winner","resultStatement"];
 
     if ((playerSelection == "rock" && computerSelection === "scissors") || 
         (playerSelection == "scissors" && computerSelection === "paper") || 
@@ -82,12 +82,12 @@ function game() {
 
     for (let i = 0; i < 5; i++) {
         
-        let playerPrompt = prompt("Rock, Paper, or Scissors?", ""); 
-        let playerSelection = verify(playerPrompt);
-        let computerSelection = getComputerChoice();
-        let result = playRound(playerSelection, computerSelection);
-        let winner = result[0];
-        let resultStatement = result[1];
+        const playerPrompt = prompt("Rock, Paper, or Scissors?", ""); 
+        const playerSelection = verify(playerPrompt);
+        const computerSelection = getComputerChoice();
+        const result = playRound(playerSelection, computerSelection);
+        const winner = result[0];
+        const resultStatement = result[1];
         
         if (winner === "Player") {
             playerScore++;
