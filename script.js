@@ -75,6 +75,15 @@ function playRound(playerSelection, computerSelection) {
 };
 
 
+function getFinalWinner(player1, player2) {
+    if (player1 > player2) {
+        console.log(`You are the ultimate winner!`);
+    } else {
+        console.log(`Computer is the ultimate winner!`);
+    };
+};
+
+
 function game() {
 
     let playerScore = 0;
@@ -100,11 +109,7 @@ function game() {
         }; 
     };
 
-    if (playerScore > computerScore) {
-        console.log(`You are the ultimate winner!`);
-    } else {
-        console.log(`Computer is the ultimate winner!`);
-    };
+    getFinalWinner(playerScore, computerScore);
 };
 
 
