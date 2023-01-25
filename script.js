@@ -1,3 +1,20 @@
+function verify(playerInput) {
+
+    let inputLowercased = playerInput.toLowerCase();
+
+    if (inputLowercased === "rock" || 
+        inputLowercased === "scissors" || 
+        inputLowercased === "paper") {
+            
+            return inputLowercased;
+
+    } else {
+        alert("Please enter Rock, Paper, or Scissors.");
+        location.reload();
+    };
+};
+
+
 function getComputerChoice() {
 
     let randomNumber = Math.floor(Math.random() * 10);
@@ -90,21 +107,5 @@ function game() {
     };
 };
 
-
-function verify(playerInput) {
-
-        let inputLowercased = playerInput.toLowerCase();
-
-        if (inputLowercased === "rock" || 
-            inputLowercased === "scissors" || 
-            inputLowercased === "paper") {
-                
-                return inputLowercased;
-
-        } else {
-            alert("Please enter Rock, Paper, or Scissors.");
-            location.reload();
-        };
-};
 
 game();
